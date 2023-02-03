@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const Post = require("../models/Post");
+const {Post, User} = require("../models");
 const withAuth = require("./../utils/auth");
 
 router.get("/", async (req, res) => {
-  const postData = await Post.findAll().catch((err) => {
+  const postData = await Post.findAll({include: [User]}).catch((err) => {
     res.json(err);
   });
   const posts = postData.map((post) => post.get({ plain: true }));
