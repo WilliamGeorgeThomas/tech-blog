@@ -2,6 +2,8 @@ const router = require("express").Router();
 const {Post, User} = require("../models");
 const withAuth = require("./../utils/auth");
 
+//add try catch
+
 router.get("/", async (req, res) => {
   const postData = await Post.findAll({include: [User]}).catch((err) => {
     res.json(err);

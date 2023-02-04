@@ -6,4 +6,8 @@ Post.belongsTo(User, {
   onDelete: "CASCADE",
 });
 
+//post has many comments
+//comment belongs to a user
+//require and expore Comment
+
 module.exports = { User, Post };
