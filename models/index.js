@@ -1,5 +1,7 @@
 const User = require("./User");
 const Post = require("./Post");
+const Comment = require("./Comment");
+
 
 Post.belongsTo(User, {
   foreignKey: "userId",
@@ -10,4 +12,4 @@ Post.belongsTo(User, {
 //comment belongs to a user
 //require and expore Comment
 
-module.exports = { User, Post };
+module.exports = { User, Post, Comment };
