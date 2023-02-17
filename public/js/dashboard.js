@@ -5,7 +5,8 @@ const newFormHandler = async (event) => {
   const body = document.querySelector("#post-body").value.trim();
 
   if (title && body) {
-    const response = await fetch(`/api/posts`, {
+    const id = event.target.getAttribute("user_id");
+    const response = await fetch(`/dashboard`, {
       method: "POST",
       body: JSON.stringify({ title, body }),
       headers: {
@@ -14,7 +15,7 @@ const newFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace("/post");
+      document.location.replace(`/post/${id}`);
     } else {
       alert("Failed to create post");
     }
@@ -38,4 +39,3 @@ const delButtonHandler = async (event) => {
 };
 
 document.querySelector(".new-post-form").addEventListener("submit", newFormHandler);
-

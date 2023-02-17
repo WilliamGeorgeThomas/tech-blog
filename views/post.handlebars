@@ -1,6 +1,9 @@
-<div class="text-center border-5 border-warning">
-    <h2>{{title}}</h2>
-    <p>{{body}}</p>
-    <p>Created by {{user.username}} on {{created_at}}</p>
 
+<div class='col-md-5 border-5 d-flex justify-content-center'>
+    <p>
+        {{post.title}}
+        {{post.body}}
+        {{post.user.username}}
+        {{post.createdAt}}
+    </p>
 </div>
