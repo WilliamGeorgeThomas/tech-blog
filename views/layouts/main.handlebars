@@ -8,24 +8,22 @@
 <body>
   <div class="flex-column justify-space-around">
     <header class="flex column">
+      <h1>TECH BLOG</h1>
       <nav class="display-flex justify-space-between align-center p-2">
-        <a href="/">HOME</a>
-        <a href="/dashboard">DASHBOARD</a>
+        <a href="/"<button class="btn btn-primary" type="submit">HOME</button></a>
+        <a href="/dashboard" <button class="btn btn-primary" type="submit">DASHBOARD</button></a>
       {{#if loggedIn}}
-      <button id="logout" class="btn-no-style">LOGOUT</button>
+      <button id="logout" class="btn btn-primary">LOGOUT</button>
       {{else}}
-      <a href="/login">LOGIN</a>
+      <a href="/login"><button id="logout" class="btn btn-primary">LOGIN</button></a>
       {{/if}}
       </nav>
-      <h1>
-       TECH BLOG
-      </h1>
     </header>
       <main class="container container-fluid mt-5">
         {{{ body }}}
       </main>
-      <footer class="container d-flex">
-        <p class="justify-content-end">Created by WGT</p>
+      <footer class="container container-fluid mt-5">
+        <p class="flex-row justify-content-end">Created by WGT</p>
       </footer>
   </div>
     {{#if loggedIn}}
