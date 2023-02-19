@@ -4,7 +4,7 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "seeds": "node seeds/index.js"
+    "seeds": "node seeds/seed.js"
   },
   "author": "",
   "license": "ISC",

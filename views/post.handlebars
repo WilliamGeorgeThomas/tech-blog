@@ -3,7 +3,10 @@
             <h2>{{post.title}}</h2>
             <h5>{{post.body}}</h5>
             <p>Posted by: {{post.user.username}}</p>
-            <p>{{post.createdAt}}</p>
+            {{!-- <p>{{post.createdAt}}</p> --}}
+            <p>Created: {{format_date post.createdAt}}</p>
+            
+
 
             <button class="btn">Add a comment</button>
 
