@@ -42,4 +42,9 @@ const newFormHandler = async (event) => {
 //   }
 // };
 
+function revealCommentForm() {
+  document.querySelector(".new-comment-form").classList.remove("hidden");
+}
+
 document.querySelector(".new-comment-form").addEventListener("click", newFormHandler);
+document.querySelector(".reveal-btn").addEventListener("click", revealCommentForm);

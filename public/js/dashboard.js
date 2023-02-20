@@ -40,5 +40,11 @@ const delButtonHandler = async (event) => {
   }
 };
 
+
+function revealForm() {
+  document.querySelector(".new-post-form").classList.remove("hidden");
+}
+
 document.querySelector(".new-post-form").addEventListener("submit", newFormHandler);
 document.querySelector(".post-list").addEventListener("click", delButtonHandler);
+document.querySelector(".reveal-btn").addEventListener("click", revealForm);

@@ -7,9 +7,10 @@
          <p>Created: {{format_date post.createdAt}}</p>
             
 
-    <button class="btn">Add a comment</button>
+    <button class="reveal-btn btn">Add a comment</button>
 
-        <form class="form new-comment-form mt-4">
+
+        <form class="form new-comment-form mt-4 hidden">
             <div class="form-group">
             <label>Comment:</label>
             <input class="form-input" type="text" id="comment-body" name="comment-body" />
@@ -32,9 +33,9 @@
                     <p>{{format_date comment.createdAt}}</p>
                     {{!-- </button> --}}
                 {{!-- </a> --}}
-            <div class="col-md-4">
+            {{!-- <div class="col-md-4">
                 <button class="btn btn-sm btn-danger" data-id="{{comment.id}}">DELETE</button>
-            </div>
+            </div> --}}
         </div>
     {{/each}}
 
