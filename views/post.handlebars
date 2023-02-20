@@ -21,8 +21,9 @@
 
      <h5 class="mt-4">Comments:</h5>
 
-        {{#each comments as |comment|}}
-            <div class='row mb-4 d-flex post-list'>
+
+    {{#each comments as |comment|}}
+        <div class='mb-4 d-flex post-list'>
             {{!-- <a href="/post/{{post.id}}"> --}}
                 {{!-- <button class="btn btn-warning"> --}}
                 <h5>{{comment.body}}</h5>
@@ -34,8 +35,8 @@
             <div class="col-md-4">
                 <button class="btn btn-sm btn-danger" data-id="{{comment.id}}">DELETE</button>
             </div>
-            </div>
-        {{/each}}
+        </div>
+    {{/each}}
 
             <div></div>
 

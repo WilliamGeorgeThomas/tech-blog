@@ -3,6 +3,7 @@ const { Post, Comment } = require("../../models");
 // const withAuth = require("./../utils/auth");
 
 
+
 router.post("/:id", async (req, res) => {
   try {
     const postData = await Comment.create({
@@ -15,6 +16,7 @@ router.post("/:id", async (req, res) => {
     res.status(400).json(err);
   }
 });
+
 
 router.delete("/:id", async (req, res) => {
   try {
