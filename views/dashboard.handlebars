@@ -1,6 +1,6 @@
 
 
-<h2 class="mx-auto">Welcome {{user.username}}</h2>
+<h2 class="mx-auto">Welcome</h2>
 
 <div class="mx-auto">
 <button class="btn reveal-btn">
@@ -24,7 +24,7 @@
 
 <h3 class="mx-auto my-4">Your Previous Posts:</h3>
 
-
+<div class="another-list mx-auto">
 {{#each posts as |post|}}
 <div class='mb-4 d-flex post-list mx-auto'>
     <a href="/post/{{post.id}}">
@@ -40,6 +40,7 @@
         </div>
 </div>
 {{/each}}
+</div>
 
 
 
