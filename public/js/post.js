@@ -71,6 +71,7 @@ const updateFormHandler = async (event) => {
 //   }
 // };
 
+
 function revealCommentForm() {
   document.querySelector(".new-comment-form").classList.remove("hidden");
 }

@@ -12,16 +12,8 @@ router.get("/", async (req, res) => {
     });
     const posts = postData.map((post) => post.get({ plain: true }));
 
-    const userData = await User.findAll({
-      where: {
-        id: req.session.user_id,
-      },
-    });
-    const users = userData.map((user) => user.get({ plain: true }));
-    console.log(users);
-
     if (req.session.loggedIn) {
-      res.render("dashboard", { posts, users, loggedIn: req.session.loggedIn });
+      res.render("dashboard", { posts, loggedIn: req.session.loggedIn });
       return;
     }
   } catch (err) {

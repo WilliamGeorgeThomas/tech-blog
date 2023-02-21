@@ -1,8 +1,7 @@
 const router = require("express").Router();
-const { Post, Comment } = require("../../models");
+const { Post, Comment, User } = require("../../models");
+const withAuth = require("../../utils/auth");
 // const withAuth = require("./../utils/auth");
-
-
 
 router.post("/:id", async (req, res) => {
   try {
@@ -16,7 +15,6 @@ router.post("/:id", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
 
 router.delete("/:id", async (req, res) => {
   try {
@@ -38,7 +36,6 @@ router.delete("/:id", async (req, res) => {
   }
 });
 
-
 // router.delete("/:id", async (req, res) => {
 //   try {
 //     const postData = await Comment.destroy({
@@ -59,25 +56,25 @@ router.delete("/:id", async (req, res) => {
 //   }
 // });
 
-
 router.put("/:id", async (req, res) => {
   try {
-    const post = await Post.update(
-      {
-        title: req.body.title,
-        body: req.body.body,
-      },
-      {
-        where: {
-          id: req.params.id,
+    if (req.params.user_id === req.session.user_id) {
+      const post = await Post.update(
+        {
+          title: req.body.title,
+          body: req.body.body,
         },
-      }
-    );
-    res.status(200).json(post);
+        {
+          where: {
+            id: req.params.id,
+          },
+        }
+      );
+      res.status(200).json(post);
+    }
   } catch (err) {
     res.status(500).json(err);
   }
 });
-
 
 module.exports = router;
