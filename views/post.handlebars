@@ -7,11 +7,11 @@
          <p>Created: {{format_date post.createdAt}}</p>
 
 
-
+{{#if postedBy}}
 <button class="btn reveal-update-btn">
 Update post
 </button>
-
+{{/if}}
 
 <form class="form update-post-form hidden">
     <div class="form-group">
