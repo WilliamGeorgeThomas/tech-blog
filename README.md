@@ -3,15 +3,12 @@
   # Description 
   A simple text-based blog for sharing thoughts on tech
   # Table of Contents 
-  * [Installation](#installation)
   * [Usage](#usage)
   * [Contributing](#contributing)
   * [Questions](#questions)
   * [Link](#link)
   * [Screenshot](#screenshot)
 
-  # Installation 
-  
   # Usage 
   After creating an account, users can add posts and comments to existing posts. They can then manage their existing posts from their user dashboard
   
